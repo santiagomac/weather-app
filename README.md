@@ -12,3 +12,6 @@ Currently, two official plugins are available:
 - Clone the repo: git clone https://github.com/santiagomac/weather-app.git
 - yarn
 - yarn dev
+
+
+![image](https://github.com/santiagomac/weather-app/assets/80358248/81db9239-42f3-4646-a357-544a1b940d24)
