@@ -58,42 +58,58 @@ function App() {
           date={data.current?.last_updated}
         />
       </div>
-      <div className="bg-white p-8 rounded-lg shadow-2xl max-w-[900px] flex justify-center gap-5">
+      <div className="bg-white p-8 rounded-lg shadow-2xl max-w-[900px] flex justify-center gap-5 mx-auto my-auto">
         <div
-          className="bg-white/100 p-8
+          className="bg-white/100 p-5
+          w-28
+          h-28
+          gap-4
           rounded-lg
           shadow-2xl
           border-t-4
-          border-green-400"
+          border-green-400 flex flex-col items-center justify-between"
         >
           <h3 className="font-bold">Mon</h3>
+          <p>45°/20°</p>
         </div>
         <div
-          className="bg-white/100 p-8
+          className="bg-white/100 p-5
+          w-28
+          h-28
+          gap-4
           rounded-lg
           shadow-2xl
           border-t-4
-          border-green-400"
+          border-green-400 flex flex-col items-center justify-between"
         >
           <h3 className="font-bold">Tues</h3>
+          <p>45°/20°</p>
         </div>
         <div
-          className="bg-white/100 p-8
+          className="bg-white/100 p-5
+          w-28
+          h-28
+          gap-4
           rounded-lg
           shadow-2xl
           border-t-4
-          border-green-400"
+          border-green-400 flex flex-col items-center justify-between"
         >
           <h3 className="font-bold">Wed</h3>
+          <p>45°/20°</p>
         </div>
         <div
-          className="bg-white/100 p-8
+          className="bg-white/100 p-5
+          w-28
+          h-28
+          gap-4
           rounded-lg
           shadow-2xl
           border-t-4
-          border-green-400"
+          border-green-400 flex flex-col items-center justify-between"
         >
           <h3 className="font-bold">Thurs</h3>
+          <p>45°/20°</p>
         </div>
         <div
           className="bg-white/100 p-5
@@ -109,22 +125,30 @@ function App() {
           <p>45°/20°</p>
         </div>
         <div
-          className="bg-white/100 p-8
+          className="bg-white/100 p-5
+          w-28
+          h-28
+          gap-4
           rounded-lg
           shadow-2xl
           border-t-4
-          border-green-400"
+          border-green-400 flex flex-col items-center justify-between"
         >
           <h3 className="font-bold">Sat</h3>
+          <p>45°/20°</p>
         </div>
         <div
-          className="bg-white/100 p-8
+          className="bg-white/100 p-5
+          w-28
+          h-28
+          gap-4
           rounded-lg
           shadow-2xl
           border-t-4
-          border-green-400"
+          border-green-400 flex flex-col items-center justify-between"
         >
           <h3 className="font-bold">Sun</h3>
+          <p>45°/20°</p>
         </div>
       </div>
     </div>

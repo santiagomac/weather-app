@@ -9,9 +9,13 @@ Currently, two official plugins are available:
 
 ## Step to run the project
 
-- Clone the repo: git clone https://github.com/santiagomac/weather-app.git
-- yarn
-- yarn dev
+1. Clone the repo: git clone https://github.com/santiagomac/weather-app.git
+2. yarn
+3. yarn dev
 
+```` JavaScript
+ const edit = new Edit();
+ ````
+# Screenshots
 
-![image](https://github.com/santiagomac/weather-app/assets/80358248/81db9239-42f3-4646-a357-544a1b940d24)
+![Alt text](image.png)
