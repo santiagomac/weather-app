@@ -22,7 +22,7 @@ function App() {
     }
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=301e715d3bdf4cd4aef14718242501&q=${city}&days=8&aqi=no&alerts=no
+        `https://api.weatherapi.com/v1/forecast.json?key=301e715d3bdf4cd4aef14718242501&q=${city}&days=8&aqi=no&alerts=no
         `
       )
       .then((response) => {
