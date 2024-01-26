@@ -1,4 +1,4 @@
-import { Weather } from '../interface';
+import { Weather } from '../interfaces/interface';
 import { formatDate } from '../utils/date';
 
 const MainCard = ({ data }: { data: Weather }) => {
@@ -17,7 +17,7 @@ const MainCard = ({ data }: { data: Weather }) => {
           className="w-20 h-20 mx-auto my-auto mb-4 border-2 border-blue-400 rounded-full"
         />
 
-        <div className="border-t-4 mb-4 border-green-400 flex flex-col items-center text-center justify-center rounded-lg p-4 shadow-lg">
+        <div className="border-t-4 mb-4 border-cyan-400 flex flex-col items-center text-center justify-center rounded-lg p-4 shadow-lg">
           <h2 className="text-7xl font-bold text-center">
             {data.current?.temp_c}°
           </h2>

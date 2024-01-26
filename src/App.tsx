@@ -2,8 +2,9 @@ import axios from 'axios';
 import MainCard from './components/MainCard';
 
 import { useEffect, useState } from 'react';
-import { Weather } from './interface';
+import { Weather } from './interfaces/interface';
 import ForecastCard from './components/ForecastCard';
+import WeekCard from './components/WeekCard';
 
 function App() {
   const [data, setData] = useState<Weather>({});
@@ -21,7 +22,7 @@ function App() {
     }
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=301e715d3bdf4cd4aef14718242501&q=${city}&days=1&aqi=no&alerts=no
+        `http://api.weatherapi.com/v1/forecast.json?key=301e715d3bdf4cd4aef14718242501&q=${city}&days=8&aqi=no&alerts=no
         `
       )
       .then((response) => {
@@ -36,10 +37,13 @@ function App() {
 
   console.log();
 
-  useEffect(() => {}, [data]);
+  useEffect(() => {
+    console.log(navigator);
+    fetchData();
+  }, [data]);
 
   return (
-    <div className="w-full h-full relative">
+    <div className="flex flex-col items-center justify-center w-full h-full mx-auto my-auto">
       <h1 className="text-center text-5xl mt-5 mb-5 font-bold">Weather App</h1>
       <div className="text-center p-4">
         <input
@@ -57,102 +61,14 @@ function App() {
           forecast={data.forecast}
           date={data.current?.last_updated}
         />
-      </div>
-      <div className="bg-white p-8 rounded-lg shadow-2xl max-w-[900px] flex justify-center gap-5 mx-auto my-auto">
-        <div
-          className="bg-white/100 p-5
-          w-28
-          h-28
-          gap-4
-          rounded-lg
-          shadow-2xl
-          border-t-4
-          border-green-400 flex flex-col items-center justify-between"
-        >
-          <h3 className="font-bold">Mon</h3>
-          <p>45°/20°</p>
-        </div>
-        <div
-          className="bg-white/100 p-5
-          w-28
-          h-28
-          gap-4
-          rounded-lg
-          shadow-2xl
-          border-t-4
-          border-green-400 flex flex-col items-center justify-between"
-        >
-          <h3 className="font-bold">Tues</h3>
-          <p>45°/20°</p>
-        </div>
-        <div
-          className="bg-white/100 p-5
-          w-28
-          h-28
-          gap-4
-          rounded-lg
-          shadow-2xl
-          border-t-4
-          border-green-400 flex flex-col items-center justify-between"
-        >
-          <h3 className="font-bold">Wed</h3>
-          <p>45°/20°</p>
-        </div>
-        <div
-          className="bg-white/100 p-5
-          w-28
-          h-28
-          gap-4
-          rounded-lg
-          shadow-2xl
-          border-t-4
-          border-green-400 flex flex-col items-center justify-between"
-        >
-          <h3 className="font-bold">Thurs</h3>
-          <p>45°/20°</p>
-        </div>
-        <div
-          className="bg-white/100 p-5
-          w-28
-          h-28
-          gap-4
-          rounded-lg
-          shadow-2xl
-          border-t-4
-          border-green-400 flex flex-col items-center justify-between"
-        >
-          <h3 className="font-bold">Fri</h3>
-          <p>45°/20°</p>
-        </div>
-        <div
-          className="bg-white/100 p-5
-          w-28
-          h-28
-          gap-4
-          rounded-lg
-          shadow-2xl
-          border-t-4
-          border-green-400 flex flex-col items-center justify-between"
-        >
-          <h3 className="font-bold">Sat</h3>
-          <p>45°/20°</p>
-        </div>
-        <div
-          className="bg-white/100 p-5
-          w-28
-          h-28
-          gap-4
-          rounded-lg
-          shadow-2xl
-          border-t-4
-          border-green-400 flex flex-col items-center justify-between"
-        >
-          <h3 className="font-bold">Sun</h3>
-          <p>45°/20°</p>
-        </div>
+        <WeekCard data={data} />
       </div>
     </div>
   );
 }
+
+/* 
+  
+*/
 
 export default App;
