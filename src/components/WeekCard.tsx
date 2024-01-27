@@ -8,13 +8,13 @@ const WeekCard = ({ data }: { data: Weather }) => {
       : [];
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-2xl w-[900px] flex justify-center gap-5 mx-auto my-auto">
+    <div className="rounded-lg shadow-2xl max-w-[100%] mx-3 p-3 grid grid-cols-2 gap-4 place-items-center bg-white sm:grid-cols-4 sm:p-6 lg:grid-cols-7 sm:gap-5 sm:mx-auto sm:my-auto sm:mt-10">
       {newWeekArray.map((item) => {
         const localDate = new Date(`${item.date}T12:00:00Z`);
         return (
           <div
             key={item.date_epoch}
-            className="bg-white/100 p-5
+            className="bg-white/100 p-3
                 w-28
                 h-28
                 rounded-lg

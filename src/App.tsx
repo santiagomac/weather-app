@@ -39,32 +39,32 @@ function App() {
   }, [data]);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full mx-auto my-auto">
-      <h1 className="text-center text-5xl mt-5 mb-5 font-bold">Weather App</h1>
-      <div className="text-center p-4">
-        <input
-          onChange={(e) => setCity(e.target.value)}
-          type="text"
-          className="py-3 px-6 w-[500px] text-lg rounded-3xl border border-gray200 text-gray-600 placeholder:text-gray-40 focus:outline-none bg-white-600/100
+    <div className="w-full h-full mt-10 mx-auto sm:my-auto sm:flex sm:justify-center sm:flex-col sm:items-center">
+      <div className="max-w-[1200px] p-6">
+        <h1 className="text-center text-5xl mt-5 mb-5 font-bold">
+          Weather App
+        </h1>
+        <div className="text-center p-4">
+          <input
+            onChange={(e) => setCity(e.target.value)}
+            type="text"
+            className="py-3 px-6 w-[400px] text-lg rounded-3xl border border-gray200 text-gray-600 placeholder:text-gray-40 focus:outline-none bg-white-600/100
         shadow-md text-center mb-5"
-          placeholder="Enter location"
-          onKeyDown={handleKeyDown}
-        />
-      </div>
-      <div className="grid grid-cols-2 content-center gap-4 max-w-[900px] mx-auto mb-14">
-        <MainCard data={data} />
-        <ForecastCard
-          forecast={data.forecast}
-          date={data.current?.last_updated}
-        />
+            placeholder="Enter location"
+            onKeyDown={handleKeyDown}
+          />
+        </div>
+        <div className="grid grid-cols-1 p-3 content-center gap-4 sm:max-w-[1200px] mx-auto mb-5 sm:grid-cols-2 sm:p-0">
+          <MainCard data={data} />
+          <ForecastCard
+            forecast={data.forecast}
+            date={data.current?.last_updated}
+          />
+        </div>
         <WeekCard data={data} />
       </div>
     </div>
   );
 }
-
-/* 
-  
-*/
 
 export default App;
