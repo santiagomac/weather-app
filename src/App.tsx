@@ -44,11 +44,11 @@ function App() {
         <h1 className="text-center text-5xl mt-5 mb-5 font-bold">
           Weather App
         </h1>
-        <div className="text-center p-4">
+        <div className="text-center p-4 max-w-[400px] sm:max-w-[800px] my-auto mx-auto">
           <input
             onChange={(e) => setCity(e.target.value)}
             type="text"
-            className="py-3 px-6 w-[400px] text-lg rounded-3xl border border-gray200 text-gray-600 placeholder:text-gray-40 focus:outline-none bg-white-600/100
+            className="py-3 px-6 w-[100%] text-lg rounded-3xl border border-gray200 text-gray-600 placeholder:text-gray-40 focus:outline-none bg-white-600/100
         shadow-md text-center mb-5"
             placeholder="Enter location"
             onKeyDown={handleKeyDown}
