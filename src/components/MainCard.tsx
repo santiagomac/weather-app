@@ -3,7 +3,7 @@ import { formatDate } from '../utils/date';
 
 const MainCard = ({ data }: { data: Weather }) => {
   return (
-    <div className="bg-white p-8 rounded-lg shadow-2xl max-w-md ">
+    <div className="bg-white p-8 rounded-lg shadow-2xl max-w-[100%] ">
       <div className="flex flex-col justify-between mb-1">
         <h2 className="text-3xl font-bold mb-1 text-center">
           {data.location?.name}, {data.location?.country}

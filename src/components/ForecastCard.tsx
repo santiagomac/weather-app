@@ -9,7 +9,7 @@ const ForecastCard = ({
   date?: string;
 }) => {
   return (
-    <div className="bg-white p-8 rounded-lg shadow-2xl max-w-md flex flex-col justify-center">
+    <div className="bg-white p-8 rounded-lg shadow-2xl max-w-[100%] flex flex-col justify-center">
       <div className="border-t-4 border-yellow-400 rounded-lg flex flex-col justify-center items-center shadow-lg p-3  mb-4">
         <p className="text-lg font-bold">Average Temp</p>
         <p>{forecast?.forecastday[0].day.avgtemp_c}</p>
