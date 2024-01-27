@@ -11,7 +11,6 @@ const WeekCard = ({ data }: { data: Weather }) => {
     <div className="bg-white p-8 rounded-lg shadow-2xl w-[900px] flex justify-center gap-5 mx-auto my-auto">
       {newWeekArray.map((item) => {
         const localDate = new Date(`${item.date}T12:00:00Z`);
-        console.log(localDate);
         return (
           <div
             key={item.date_epoch}

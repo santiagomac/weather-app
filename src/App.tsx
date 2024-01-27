@@ -8,7 +8,7 @@ import WeekCard from './components/WeekCard';
 
 function App() {
   const [data, setData] = useState<Weather>({});
-  const [city, setCity] = useState('');
+  const [city, setCity] = useState('Medellin');
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
@@ -17,12 +17,11 @@ function App() {
   };
 
   const fetchData = () => {
-    if (city.trim() === '') {
-      setCity('Medellin');
-    }
     axios
       .get(
-        `https://api.weatherapi.com/v1/forecast.json?key=301e715d3bdf4cd4aef14718242501&q=${city}&days=8&aqi=no&alerts=no
+        `https://api.weatherapi.com/v1/forecast.json?key=${
+          import.meta.env.VITE_API_KEY
+        }&q=${city}&days=8&aqi=no&alerts=no
         `
       )
       .then((response) => {
@@ -35,10 +34,7 @@ function App() {
       });
   };
 
-  console.log();
-
   useEffect(() => {
-    console.log(navigator);
     fetchData();
   }, [data]);
 
