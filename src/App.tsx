@@ -39,29 +39,31 @@ function App() {
   }, [data]);
 
   return (
-    <div className="w-full h-full mt-10 mx-auto sm:my-auto sm:flex sm:justify-center sm:flex-col sm:items-center">
-      <div className="max-w-[1200px] p-6">
-        <h1 className="text-center text-5xl mt-5 mb-5 font-bold">
-          Weather App
-        </h1>
-        <div className="text-center p-4 max-w-[400px] sm:max-w-[800px] my-auto mx-auto">
-          <input
-            onChange={(e) => setCity(e.target.value)}
-            type="text"
-            className="py-3 px-6 w-[100%] text-lg rounded-3xl border border-gray200 text-gray-600 placeholder:text-gray-40 focus:outline-none bg-white-600/100
+    <div className="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#0CD_100%)]">
+      <div className="w-full h-full mt-10 mx-auto sm:my-auto sm:flex sm:justify-center sm:flex-col sm:items-center">
+        <div className="max-w-[1200px] p-6">
+          <h1 className="text-center text-5xl mt-5 mb-5 font-bold">
+            Weather App
+          </h1>
+          <div className="text-center p-4 max-w-[400px] sm:max-w-[800px] my-auto mx-auto">
+            <input
+              onChange={(e) => setCity(e.target.value)}
+              type="text"
+              className="py-3 px-6 w-[100%] text-lg rounded-3xl border border-gray200 text-gray-600 placeholder:text-gray-40 focus:outline-none bg-white-600/100
         shadow-md text-center mb-5"
-            placeholder="Enter location"
-            onKeyDown={handleKeyDown}
-          />
+              placeholder="Enter location"
+              onKeyDown={handleKeyDown}
+            />
+          </div>
+          <div className="grid grid-cols-1 p-3 content-center gap-4 sm:max-w-[1200px] mx-auto mb-5 sm:grid-cols-2 sm:p-0">
+            <MainCard data={data} />
+            <ForecastCard
+              forecast={data.forecast}
+              date={data.current?.last_updated}
+            />
+          </div>
+          <WeekCard data={data} />
         </div>
-        <div className="grid grid-cols-1 p-3 content-center gap-4 sm:max-w-[1200px] mx-auto mb-5 sm:grid-cols-2 sm:p-0">
-          <MainCard data={data} />
-          <ForecastCard
-            forecast={data.forecast}
-            date={data.current?.last_updated}
-          />
-        </div>
-        <WeekCard data={data} />
       </div>
     </div>
   );
