@@ -14,7 +14,7 @@ const MainCard = ({ data }: { data: Weather }) => {
         <img
           src={data.current?.condition.icon}
           alt=""
-          className="w-20 h-20 mx-auto my-auto mb-4 border-2 border-blue-400 rounded-full"
+          className="w-20 h-20 mx-auto my-auto mb-4 border-2 border-blue-400 rounded-full p-2"
         />
 
         <div className="border-t-4 mb-4 border-cyan-400 flex flex-col items-center text-center justify-center rounded-lg p-4 shadow-lg">
