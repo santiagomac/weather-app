@@ -13,10 +13,10 @@ This is an application developed with **REACT** and **TAILWIND**. The app fetch 
 ## Mobile POV
 
 <div style="display: flex; gap: 4px;">
-    <img src="image-1.png" alt="mobile screenshot 1"/>
-    <img src="image-2.png" alt="mobile screenshot 2"/>
+    <img src="./public/image-1.png" alt="mobile screenshot 1"/>
+    <img src="./public/image-2.png" alt="mobile screenshot 2"/>
 </div>
 
 ## Desktop POV
 
-![Alt text](image-3.png)
+![Alt text](./public/image-3.png)
