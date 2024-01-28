@@ -1,0 +1,9 @@
+@media (max-height: 800px) {
+    .height-670 {
+      /* Estilos para cuando el height es al menos 670px */
+      /* Puedes agregar estilos personalizados aquí */
+      /* ...otros estilos... */
+      margin-top: .3rem;
+      height: 950px;
+    }
+  }

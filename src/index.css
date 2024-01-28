@@ -4,10 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    height: 100vh;
+html {
+  height: 100vh;
 }
 
-body{
-    font-family: 'Onest', sans-serif;
+body {
+  font-family: 'Onest', sans-serif;
 }
