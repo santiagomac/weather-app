@@ -41,12 +41,12 @@ function App() {
   }, [data]);
 
   return (
-    <div className="mt-10 mx-auto sm:my-auto sm:flex sm:justify-center sm:flex-col sm:items-center sm:mt-14 md:mt-10 lg:mt-0 absolute inset-0 -z-10 h-[2000px] md:h-[1070px] lg:h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#0CD_100%)] height-670">
+    <main className="mt-10 mx-auto sm:my-auto sm:flex sm:justify-center sm:flex-col sm:items-center sm:mt-14 md:mt-10 lg:mt-0 absolute inset-0 -z-10 h-[2000px] md:h-[1070px] lg:h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#0CD_100%)] height-670">
       <div className="max-w-[1200px] p-6">
         <h1 className="text-center text-5xl mt-5 mb-5 font-bold">
           Weather App
         </h1>
-        <div className="text-center p-4 max-w-[400px] sm:max-w-[800px] my-auto mx-auto">
+        <section className="text-center p-4 max-w-[400px] sm:max-w-[800px] my-auto mx-auto">
           <input
             onChange={(e) => setCity(e.target.value)}
             type="text"
@@ -55,17 +55,22 @@ function App() {
             placeholder="Enter location"
             onKeyDown={handleKeyDown}
           />
-        </div>
-        <div className="grid grid-cols-1 p-3 content-center gap-4 sm:max-w-[1200px] mx-auto mb-5 sm:grid-cols-2 sm:p-0">
+        </section>
+        <section className="grid grid-cols-1 p-3 content-center gap-4 sm:max-w-[1200px] mx-auto mb-5 sm:grid-cols-2 sm:p-0">
           <MainCard data={data} />
           <ForecastCard
             forecast={data.forecast}
             date={data.current?.last_updated}
           />
-        </div>
+        </section>
         <WeekCard data={data} />
       </div>
-    </div>
+      <footer>
+        <p>
+          🚀 built by <strong>santiagomac</strong>
+        </p>
+      </footer>
+    </main>
   );
 }
 
