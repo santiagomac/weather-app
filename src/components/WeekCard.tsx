@@ -1,5 +1,5 @@
 import { Weather } from '../interfaces/interface';
-import { dayOfWeeks } from '../const/week';
+import { dayOfWeeks } from '../const/index';
 
 const WeekCard = ({ data }: { data: Weather }) => {
   const newWeekArray =

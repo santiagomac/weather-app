@@ -7,3 +7,5 @@ export const dayOfWeeks = [
   'Friday',
   'Saturday',
 ];
+
+export const LANGUAGES = [{ label: 'Spanish', code: 'es' }];
