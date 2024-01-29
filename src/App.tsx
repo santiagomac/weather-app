@@ -65,10 +65,10 @@ function App() {
         </section>
         <WeekCard data={data} />
       </div>
-      <footer className="text-center md:mb-14">
-        <p>
+      <footer className="text-center md:mb-14 hover:underline">
+        <a href="https://santiagomac.pages.dev/">
           🚀 built by <strong>santiagomac</strong>
-        </p>
+        </a>
       </footer>
     </main>
   );
